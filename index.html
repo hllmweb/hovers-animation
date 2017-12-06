@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*,*:before,*:after{
+			padding: 0;
+			margin: 0;
+		}
+		.ch-grid {
+			margin: 20px 0 0 0;
+			padding: 0;
+			list-style: none;
+			display: block;
+			text-align: center;
+			width: 100%;
+		}
+
+		.ch-grid:after,
+		.ch-item:before {
+			content: '';
+			display: table;
+		}
+
+		.ch-grid:after {
+			clear: both;
+		}
+
+		.ch-grid li {
+			width: 169px;
+			height: 220px;
+			display: inline-block;
+			margin: 5px 5px;
+		}
+		.ch-item {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			cursor: pointer;
+			-webkit-perspective: 900px;
+			-moz-perspective: 900px;
+			-o-perspective: 900px;
+			-ms-perspective: 900px;
+			perspective: 900px;
+		}
+		.ch-info{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			-o-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+		}
+		.ch-info > div {
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 3%;
+			-webkit-transition: all 0.3s linear;
+			-moz-transition: all 0.3s linear;
+			-o-transition: all 0.3s linear;
+			-ms-transition: all 0.3s linear;
+			transition: all 0.3s linear;
+			-webkit-transform-origin: 50% 0%;
+			-moz-transform-origin: 50% 0%;
+			-o-transform-origin: 50% 0%;
+			-ms-transform-origin: 50% 0%;
+			transform-origin: 50% 0%;
+		}
+		.ch-info .ch-info-back {
+			-webkit-transform: translate3d(0,0,-170px) rotate3d(1,0,0,90deg);
+			-moz-transform: translate3d(0,0,-170px) rotate3d(1,0,0,90deg);
+			-o-transform: translate3d(0,0,-170px) rotate3d(1,0,0,90deg);
+			-ms-transform: translate3d(0,0,-170px) rotate3d(1,0,0,90deg);
+			transform: translate3d(0,0,-170px) rotate3d(1,0,0,90deg); 
+			opacity: 0;
+		}
+		.ch-info h2 {
+			color: #ffffff;
+			text-transform:;
+			margin:37px 0 0 0;
+			font-weight:300;
+			font-size: 22px;
+			line-height:12px;
+		  }
+		.ch-info p {
+			color: #ffffff!important;
+			padding: 10px 5px;
+			margin: 0 20px;
+			font-size: 16px;
+		}
+		.ch-info a {
+			display: block;
+			background:#ffffff;
+			-webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px;
+			color: #888888;   
+			font-weight: 300;
+			text-align:center;
+			text-transform: uppercase;
+			font-size: 13px;
+			width:80px;
+			height:25px;
+			margin:20px auto 0 auto;
+			line-height:25px; 
+			text-decoration:none;
+			transition: all 150ms ease;
+		}
+		.ch-info a:hover {
+			background:#03293b;
+			color: #ffffff;
+		}
+		.ch-info-front {
+			border: 1px solid #959595;
+		}
+		.ch-item:hover .ch-info-front {
+			-webkit-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+			-moz-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+			-o-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+			-ms-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+			transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+			opacity: 0;
+		}
+		.ch-item:hover .ch-info-back {
+			-webkit-transform: rotate3d(1,0,0,0deg);
+			-moz-transform: rotate3d(1,0,0,0deg);
+			-o-transform: rotate3d(1,0,0,0deg);
+			-ms-transform: rotate3d(1,0,0,0deg);
+			transform: rotate3d(1,0,0,0deg);
+			opacity: 1;
+		}
+		.bgA{ 	background:#fe9900;}
+		.bgB{ 	background:#ffc801;}
+		.bgC{ 	background:#368cc9;}
+		.bgD{ 	background:#80c944;}
+		.bgEc{ 	background:#eb2638;}
+		.bgF{ 	background:#a79e7d;}
+
+	</style>
+</head>
+<body>
+	<ul class="ch-grid">
+		<li>
+			<div class="ch-item">
+				<div class="ch-info">
+					<div class="ch-info-front"><img src="http://www.little-dixie.lib.mo.us/wp-content/uploads/2017/08/Minion.jpg" border="0" height="120px"></div>
+					<div class="ch-info-back bgA">
+						<h2>Texto 01</h2>
+						<a href="" title="Saiba mais sobre">Veja mais</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="ch-item">
+				<div class="ch-info">
+					<div class="ch-info-front"><img src="http://www.little-dixie.lib.mo.us/wp-content/uploads/2017/08/Minion.jpg" border="0" height="120px"></div>
+					<div class="ch-info-back bgB">
+						<h2>Texto 02</h2>
+						<a href="" title="Saiba mais sobre">Veja mais</a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="ch-item">
+				<div class="ch-info">
+					<div class="ch-info-front"><img src="http://www.little-dixie.lib.mo.us/wp-content/uploads/2017/08/Minion.jpg" border="0" height="120px"></div>
+					<div class="ch-info-back bgC">
+						<h2>Texto 03</h2>
+						<a href="" title="Saiba mais sobre">Veja mais</a>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</body>
+</html>
